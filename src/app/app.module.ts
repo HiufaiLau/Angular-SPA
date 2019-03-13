@@ -5,7 +5,8 @@ import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
-import { ServersComponent } from './servers/servers.component';//where to find this class
+import { ServersComponent } from './servers/servers.component';
+import { AlternativeComponent } from './alternative/alternative.component';//where to find this class
 
 @NgModule({
   //ngModule decorator
@@ -15,7 +16,8 @@ import { ServersComponent } from './servers/servers.component';//where to find t
   declarations: [
     AppComponent,
     ServerComponent,
-    ServersComponent
+    ServersComponent,
+    AlternativeComponent
   ],
   imports: [
     BrowserModule,
