@@ -1,8 +1,14 @@
-<!-- property binding -->
-<button class="btn btn-primary" [disabled]="!allowNewServer">Add Server</button>
+<!-- property binding, it is not the attribute --> 
+<!-- onclick eventlistener = (click)="" -->
+<!-- For events, you don't bind to onclick but only to click (=> (click)). -->
+<button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
 <app-server></app-server>
 <!-- <app-server></app-server> -->
 
+<!-- property binding, it is not the attribute --> 
+<!-- <p [innerText]="allowNewServer"></p> -->
+
+<p>{{serverCreationStatus}}</p>
 <app-alternative></app-alternative>
 
 

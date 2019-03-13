@@ -12,6 +12,7 @@ import { Server } from 'selenium-webdriver/safari';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
+  serverCreationStatus='No server is created';
  allowNewServer = false;
   constructor() {
     setTimeout(()=>{
@@ -22,4 +23,7 @@ export class ServersComponent implements OnInit {
   ngOnInit() {
   }
 
+  onCreateServer(){
+    this.serverCreationStatus = "Server is created";
+  }
 }
