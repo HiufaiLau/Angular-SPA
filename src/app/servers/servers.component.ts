@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Server } from 'selenium-webdriver/safari';
 
 @Component({
-  selector:'.app-servers',//selected by class
+  selector: '.app-servers',//selected by class
   // selector: '[app-servers]',//put the [] to use attribute selector , you can select element by attribute in CSS
   templateUrl: './servers.component.html',
   //(external file, if more than 3 lines html code)
@@ -12,18 +12,27 @@ import { Server } from 'selenium-webdriver/safari';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-  serverCreationStatus='No server is created';
- allowNewServer = false;
+  serverCreationStatus = 'No server is created';
+  allowNewServer = false;
+  noName = false;
+  newName = '';
+  name = 'TestServer';
+  username = '';
+
   constructor() {
-    setTimeout(()=>{
+    setTimeout(() => {
       this.allowNewServer = true;
-    },2000);
-   }
+    }, 2000);
+  }
 
   ngOnInit() {
   }
 
-  onCreateServer(){
-    this.serverCreationStatus = "Server is created";
+  onCreateServer() {
+    this.serverCreationStatus = "Server is created ! Name is " + this.name + ".";
+  }
+
+  onUpdateServerName(event: any) {
+    console.log(event);
   }
 }

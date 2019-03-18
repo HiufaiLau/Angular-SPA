@@ -1,17 +1,31 @@
-<!-- property binding, it is not the attribute --> 
+<label for="">Username</label>
+<input type="text" [(ngModel)]="username">
+<p>{{username}}</p>
+<!-- === to ckeck something , = to assgin a value -->
+<button class="btn btn-primary" [disable]="username === ''" (click)="username=''">Reset user</button>
+<label for="">Server Name</label>
+<!-- two-way-binding -->
+<input type="text" [(ngModel)]="name">
+<br>
+<!-- <p>{{name}}</p> -->
+
+<!-- input event , one-way-data-binding-->
+<!-- <input type="text" class="from-control" (input)="onUpdateServerName($event)">
+<br> -->
+
+<!-- property binding, it is not the attribute -->
 <!-- onclick eventlistener = (click)="" -->
 <!-- For events, you don't bind to onclick but only to click (=> (click)). -->
 <button class="btn btn-primary" [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
-<p>{{allowNewServer}}</p>
+
+<!-- property binding -->
+<!-- <p>{{allowNewServer}}</p> -->
+
 <app-server></app-server>
 <!-- <app-server></app-server> -->
 
-<!-- property binding, it is not the attribute --> 
+<!-- property binding, it is not the attribute -->
 <!-- <p [innerText]="allowNewServer"></p> -->
 
 <p>{{serverCreationStatus}}</p>
 <app-alternative></app-alternative>
-
-
-
-
