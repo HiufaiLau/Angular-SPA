@@ -14,25 +14,25 @@ import { Server } from 'selenium-webdriver/safari';
 export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server is created';
   allowNewServer = false;
-  noName = false;
-  newName = '';
   name = 'TestServer';
   username = '';
+  serverCreated = false;
 
-  constructor() {
-    setTimeout(() => {
-      this.allowNewServer = true;
-    }, 2000);
-  }
+    constructor() {
+  setTimeout(() => {
+    this.allowNewServer = true;
+  }, 2000);
+}
 
-  ngOnInit() {
-  }
+ngOnInit() {
+}
 
-  onCreateServer() {
-    this.serverCreationStatus = "Server is created ! Name is " + this.name + ".";
-  }
+onCreateServer() {
+  this.serverCreated = true;
+  this.serverCreationStatus = "Server is created ! Name is " + this.name + ".";
+}
 
-  onUpdateServerName(event: any) {
-    console.log(event);
-  }
+onUpdateServerName(event: any) {
+  console.log(event);
+}
 }

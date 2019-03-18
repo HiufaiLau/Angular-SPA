@@ -2,7 +2,9 @@
 <input type="text" [(ngModel)]="username">
 <p>{{username}}</p>
 <!-- === to ckeck something , = to assgin a value -->
-<button class="btn btn-primary" [disable]="username === ''" (click)="username=''">Reset user</button>
+<!-- [disabled]="username === ''" inside the"" assign the boolean -->
+<button class="btn btn-primary" [disabled]="username === ''" (click)="username=''">Reset user</button>
+<br>
 <label for="">Server Name</label>
 <!-- two-way-binding -->
 <input type="text" [(ngModel)]="name">
@@ -27,5 +29,11 @@
 <!-- property binding, it is not the attribute -->
 <!-- <p [innerText]="allowNewServer"></p> -->
 
-<p>{{serverCreationStatus}}</p>
+<!-- <p>{{serverCreationStatus}}</p> -->
+
+<!-- ngIf and else , a structural directive-->
+<p *ngIf="serverCreated; else noServer">Server is created ! Name is {{name}}</p>
+<ng-template #noServer>
+   <p> No server was created.</p>
+</ng-template>
 <app-alternative></app-alternative>

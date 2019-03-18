@@ -8,12 +8,15 @@ export class ServerComponent{
     //String interpellation
     // assigning the type with typescript
     serverId : number = 10; 
-    serverStatus0 : string = 'offline';
-    serverStatus1 : string = 'online';
+    serverStatus : string = 'offline';
+    // serverStatus1 : string = 'online';
 
+    constructor(){
+        this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
+    }
     //define a method in typescript
     //return a string at the end
     getServerStatus(){
-        return this.serverStatus0;
+        return this.serverStatus;
     }
 }
