@@ -23,7 +23,7 @@
 <!-- property binding -->
 <!-- <p>{{allowNewServer}}</p> -->
 
-<app-server *ngFor="let server of servers"></app-server>
+<app-server  *ngFor="let server of servers"></app-server>
 <!-- <app-server></app-server> -->
 
 <!-- property binding, it is not the attribute -->
@@ -36,4 +36,4 @@
 <ng-template #noServer>
    <p> No server was created.</p>
 </ng-template>
-<app-alternative></app-alternative>
+<app-alternative ngFor="let logItem of log"></app-alternative>

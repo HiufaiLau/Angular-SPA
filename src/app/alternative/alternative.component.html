@@ -1,4 +1,9 @@
 <span>Messege :</span>
 <p *ngIf="showDetail">{{text}} </p>
-<br>
 <button class="btn btn-primaray" (click)="showDetail=!showDetail">Display Detail</button>
+
+<br>
+
+<div *ngFor="let logItem of log">{{logItem}}</div>
+<button class="btn btn-primaray" (click)="onDisplay()">Display Detail</button>
+

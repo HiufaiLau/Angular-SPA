@@ -7,13 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AlternativeComponent implements OnInit {
   showDetail = false;
+  display = false;
   text: string = 'Today is sunny.';
-  log:[];
+  log=[];
 
   constructor() { }
   
   onDisplay(){
-    this.showDetail=!this.showDetail;
+    this.display=!this.display;
     this.log.push(this.log.length + 1);
   }
 
