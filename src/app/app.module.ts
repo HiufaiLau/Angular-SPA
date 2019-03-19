@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { AlternativeComponent } from './alternative/alternative.component';
-
 //where to find this class
 
 @NgModule({

@@ -1,9 +1,11 @@
 <span>Messege :</span>
 <p *ngIf="showDetail">{{text}} </p>
-<button class="btn btn-primaray" (click)="showDetail=!showDetail">Display Detail</button>
+<br>
+<!-- <button class="btn btn-primaray" (click)="showDetail=!showDetail">Display Detail</button> -->
 
 <br>
 
-<div *ngFor="let logItem of log">{{logItem}}</div>
+<div *ngFor="let logItem of log ; let i = index" 
+  [ngStyle]="{backgroundColor: i >=4 ? 'orange':'transperent'}"
+  [ngClass]="{'white-text': i >= 4}">{{logItem}}</div>
 <button class="btn btn-primaray" (click)="onDisplay()">Display Detail</button>
-

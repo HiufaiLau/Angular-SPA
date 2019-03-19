@@ -3,7 +3,12 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-alternative',
   templateUrl: './alternative.component.html',
-  styleUrls: ['./alternative.component.css']
+  // 
+  styles:[`
+  .white-text{
+      color:white;
+  }
+`]
 })
 export class AlternativeComponent implements OnInit {
   showDetail = false;
@@ -14,8 +19,10 @@ export class AlternativeComponent implements OnInit {
   constructor() { }
   
   onDisplay(){
-    this.display=!this.display;
-    this.log.push(this.log.length + 1);
+    this.showDetail=!this.showDetail;
+    // this.log.push(this.log.length + 1);
+    this.log.push(new Date());
+
   }
 
   outputText(){
