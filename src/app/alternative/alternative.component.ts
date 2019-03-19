@@ -13,7 +13,7 @@ import { Component, OnInit } from '@angular/core';
 export class AlternativeComponent implements OnInit {
   showDetail = false;
   display = false;
-  text: string = 'Today is sunny.';
+  text: string = 'Today is sunny!';
   log=[];
 
   constructor() { }
