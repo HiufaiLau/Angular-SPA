@@ -9,7 +9,7 @@ export class ServerComponent{
     // assigning the type with typescript
     serverId : number = 10; 
     serverStatus : string = 'offline';
-    // serverStatus1 : string = 'online';
+    // serverStatus : string = 'online';
 
     constructor(){
         this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
@@ -18,5 +18,9 @@ export class ServerComponent{
     //return a string at the end
     getServerStatus(){
         return this.serverStatus;
+    }
+
+    getColor(){
+        return this.serverStatus ==='online' ? 'green' : 'red' ;
     }
 }
