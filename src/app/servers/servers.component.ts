@@ -12,7 +12,7 @@ import { Server } from 'selenium-webdriver/safari';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-  serverCreationStatus = 'No server is created';
+  serverCreationStatus = 'No server is created.';
   allowNewServer = false;
   name = 'TestServer';
   username = '';
