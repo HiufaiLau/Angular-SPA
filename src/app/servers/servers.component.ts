@@ -14,10 +14,10 @@ import { Server } from 'selenium-webdriver/safari';
 export class ServersComponent implements OnInit {
   serverCreationStatus = 'No server is created.';
   allowNewServer = false;
-  name = 'TestServer';
+  name = 'Server';
   username = '';
   serverCreated = false;
-  servers = ['TestServer','TestServer2'];
+  servers = ['Server','Server2'];
 
     constructor() {
   setTimeout(() => {
